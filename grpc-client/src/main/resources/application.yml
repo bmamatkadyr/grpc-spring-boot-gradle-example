@@ -1,0 +1,9 @@
+server:
+  port: 8080
+grpc:
+  client:
+    grpc-server:
+      address: 'http://localhost:9191'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext

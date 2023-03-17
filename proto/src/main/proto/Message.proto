@@ -9,6 +9,12 @@ message Message {
   string message = 1;
 }
 
+message GiveMeTrueRequest {}
+message GiveMeTrueResponse {
+  bool true = 1;
+}
+
 service MessageService {
   rpc send(Message) returns (Message) {}
+  rpc giveMeTrue (GiveMeTrueRequest) returns (GiveMeTrueResponse) {}
 }

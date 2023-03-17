@@ -1,5 +1,7 @@
 package grpcserver;
 
+import beksultan.grpc.GiveMeTrueRequest;
+import beksultan.grpc.GiveMeTrueResponse;
 import beksultan.grpc.Message;
 import beksultan.grpc.MessageServiceGrpc;
 import io.grpc.stub.StreamObserver;
@@ -19,6 +21,12 @@ public class MessageServiceImpl extends MessageServiceGrpc.MessageServiceImplBas
         responseObserver.onNext(message);
 
         // complete
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void giveMeTrue(GiveMeTrueRequest request, StreamObserver<GiveMeTrueResponse> responseObserver) {
+        responseObserver.onNext(GiveMeTrueResponse.newBuilder().setTrue(true).build());
         responseObserver.onCompleted();
     }
 }
