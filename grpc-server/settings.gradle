@@ -1,0 +1,3 @@
+rootProject.name = 'grpc-server'
+include(':proto')
+project(':proto').projectDir = new File(settingsDir, '../proto')

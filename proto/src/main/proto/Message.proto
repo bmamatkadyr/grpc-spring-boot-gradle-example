@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package beksultan.grpc;
+
+option java_multiple_files = true;
+// add other options
+
+message Message {
+  string message = 1;
+}
+
+service MessageService {
+  rpc send(Message) returns (Message) {}
+}
