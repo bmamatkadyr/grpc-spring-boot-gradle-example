@@ -8,7 +8,6 @@ build/
 # grpc-server
 grpc-server/.gradle
 grpc-server/build
-grpc-server/gradle
 
 ### IntelliJ IDEA ###
 .idea
